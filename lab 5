@@ -1,36 +1,36 @@
-классfigColor():
-    def__init__(само,цвет):
-        себя. цвет=цвет
+lass figColor():
+    def __init__(self, color):
+        self.color = color
 
-прямоугольник класса(figColor):
-    def__init__(self,width,height,color='red'):
-        себя. ширина=ширина
-        себя. высота=высота
-        себя. цвет =фигЦвет(цвет))
+class rectangle(figColor):
+    def __init__(self, width, height, color='red'):
+        self.width = width
+        self.height = height
+        self.color = figColor(color)
     
     def getSquare(self):
-        возврат(сам. ширина*сама. высота)
+        return (self.width * self.height)
     
     def repr(self):
-        возврат(сам. ширина, селфи. высота, селф. цвет. цвет, сам. getSquare())
+        return (self.width, self.height, self.color.color, self.getSquare())
         
-классныйкруг():
-    def__init__(self,radius):
-        себя. радиус=радиус
+class circle():
+    def __init__(self, radius):
+        self.radius = radius
         
     def getSquare(self):
-        возврат(сам. радиус*математика. пи)
+        return (self.radius * math.pi)
     
     def repr(self):
-        возврат(сам. радиус, сам. цвет, сам. getSquare())
+        return (self.radius, self.color, self.getSquare())
 
-квадрат класса(прямоугольник):
-    def__init__(self,side):
-        себя. сторона =прямоугольник(сторона;сторона))
+class square(rectangle):
+    def __init__(self, side):
+        self.side = rectangle(side, side)
     
     def repr(self):
-        возврат(сам. сторона. ширина, селфи. сторона. цвет. цвет, сам. сторона. getSquare())
+        return (self.side.width, self.side.color.color, self.side.getSquare())
 
-a=прямоугольник(2,3;'красный')
-b=квадрат(2)
-печать(б. репр())
+a = rectangle(2, 3, 'red')
+b = square(2)
+print(b.repr())
